@@ -2,9 +2,6 @@ const button = document.getElementById("rollButton")
 let score = 0
 let randomNumber1 = 0
 let displayScore = document.getElementById("score")
-// let counter = 0;
-
-
 
 const scoreCheck = () => {
     if (score > 19){
@@ -69,14 +66,7 @@ const rollTheDice = () => {
 }
 
 
-
-
 button.addEventListener("click", () => {
-    // let i = 0;
-    // while (i <= 6){
-    //     setTimeout(diceCycle(), 100);
-    //     }
-    //     i=0
     preRoll()
     diceShow()
 })
