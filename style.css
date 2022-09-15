@@ -51,6 +51,8 @@ body {
 }
 
 .diceContainer{
+    background-color: rgb(116, 250, 255, 0.6);
+    
     border-style: groove;
     border-color: rgb(151, 151, 151);
     border-width:8px;
@@ -63,6 +65,7 @@ body {
 }
 
 .diceContainer2{
+    background-color: rgb(116, 250, 255, 0.6);
     border-style: groove;
     border-color: rgb(151, 151, 151);
     border-width:8px;
