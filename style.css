@@ -20,6 +20,7 @@ body {
 .main{
     display: flex;
     justify-content: center;
+    flex-direction: column;
     padding-top:3%;
     flex-direction: row;
 }
@@ -158,6 +159,12 @@ body {
     width:100px;
     height: 100px;
     text-align: center;
+}
+
+#home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #footBar{
