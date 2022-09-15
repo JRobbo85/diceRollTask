@@ -2,7 +2,8 @@ const button = document.getElementById("rollButton")
 let score = 0
 let randomNumber1 = 0
 let displayScore = document.getElementById("score")
-const loopTime = 6
+// let counter = 0;
+
 
 
 const scoreCheck = () => {
@@ -22,23 +23,27 @@ const diceHide = () => {
     document.getElementById("diceImage").style.visibility="hidden";
 }
 
-// const diceCycle = () => {
-//         setTimeout(function() {
-//         let rollCycle = Math.floor(Math.random() * 6) + 1;
-//         document.querySelector(".diceImage").setAttribute("src", "images/dice" + rollCycle + ".png")
-//         }, 200);
-        
-// }
-
 const diceCycle = () => {
-    // let i = 0;
-    // while (i <= 6){
-        setTimeout(function() {
         let rollCycle = Math.floor(Math.random() * 6) + 1;
-        document.getElementById("diceImage").setAttribute("src", "images/dice" + rollCycle + ".png")
-        }, 10);
-    // i+=1;
+        document.getElementById("diceImage").setAttribute("src", "images/dice" + rollCycle + ".png")        
+}
+
+const preRoll = () => {
+    let counter = 0;
+    
+    setInterval(function(){
+        
+        if (counter < 6){
+        counter += 1;
+        diceCycle()    
+        console.log(counter)}
+        else if (counter = 6){
+        clearInterval()
+        
     }
+    }, 20)
+    rollTheDice()
+}
 
 const rollTheDice = () => {
     setTimeout(function () {
@@ -58,8 +63,8 @@ const rollTheDice = () => {
         console.log(score)
         document.getElementById("score").innerHTML = score
         }        
-    }, 100); 
-    setTimeout(scoreCheck, 101)
+    }, 200); 
+    setTimeout(scoreCheck, 201)
     
 }
 
@@ -72,6 +77,6 @@ button.addEventListener("click", () => {
     //     setTimeout(diceCycle(), 100);
     //     }
     //     i=0
-    rollTheDice()
+    preRoll()
     diceShow()
 })
