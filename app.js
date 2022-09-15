@@ -38,19 +38,23 @@ const preRoll = () => {
         clearInterval()
         
     }
-    }, 100)
-    rollTheDice()
+    }, 50)
+    setTimeout(rollTheDice, 550)
 }
 
 const rollTheDice = () => {
     setTimeout(function () {
         randomNumber1 = Math.floor(Math.random() * 6) + 1;
         if (randomNumber1 == 1){  
+            document.getElementById("diceImage").setAttribute("src", "images/dice1.png"); 
+            setTimeout(function () {
+                window.confirm("You Rolled 1. You Lose...");
+                score = 0;
+                document.getElementById("score").innerHTML = score
+                diceHide()
+                ,10
+            })
             
-            window.confirm("You Rolled 1. You Lose...");
-            score = 0;
-            document.getElementById("score").innerHTML = score
-            diceHide()
         }
         else {
         document.getElementById("diceImage").setAttribute("src",
