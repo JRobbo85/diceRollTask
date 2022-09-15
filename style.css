@@ -78,13 +78,27 @@ body {
 }
 
 .scoreSection{
-    display: flex;
-    justify-content: center;  
+    box-shadow: 3px 3px gray;
+    border-style: groove;
+    border-width: 2px;
+    border-color: gray;
+    background-color:skyblue;
+    width:70px;
+    height: 70px;
+    text-align: center;
+    
 }
 
 .scoreSection2{
-    display: flex;
-    justify-content: center;  
+    box-shadow: 3px 3px gray;
+    border-style: groove;
+    border-width: 2px;
+    border-color: gray;
+    background-color:skyblue;
+    width:70px;
+    height: 70px;
+    text-align: center;
+      
 }
 
 #score {
@@ -137,6 +151,10 @@ body {
     
 }
 
+#diceImage{
+    box-shadow: 5px 5px gray;
+}
+
 .scores{
     padding-top:40px;
     display: flex;
@@ -145,6 +163,7 @@ body {
 }
 
 .player1score{
+    box-shadow: 3px 3px gray;
     border-style: groove;
     border-width: 2px;
     border-color: gray;
@@ -155,6 +174,7 @@ body {
 }
 
 .player2score{
+    box-shadow: 3px 3px gray;
     border-style: groove;
     border-width: 2px;
     border-color: gray;
