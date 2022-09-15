@@ -33,15 +33,15 @@ const preRoll = () => {
     
     setInterval(function(){
         
-        if (counter < 6){
+        if (counter < 10){
         counter += 1;
         diceCycle()    
         console.log(counter)}
-        else if (counter = 6){
+        else if (counter = 10){
         clearInterval()
         
     }
-    }, 20)
+    }, 100)
     rollTheDice()
 }
 
