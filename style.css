@@ -42,6 +42,15 @@ body {
     padding: 10px;
 }
 
+#player1 {
+    box-shadow: 3px 3px gray;
+}
+
+#player2{
+    box-shadow: 3px 3px gray;
+
+}
+
 #twoPlayer{
     display: flex;
     flex-direction: column;
