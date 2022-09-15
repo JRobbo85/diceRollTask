@@ -12,7 +12,7 @@ let totalscore2 = 0
 
 const scoreCheck1 = () => {
     
-    if (totalscore1 > 19){
+    if (totalscore1 > 29){
         window.confirm("You Win!!!")
         totalscore1 = 0;
         totalscore2 = 0;
@@ -26,7 +26,7 @@ const scoreCheck1 = () => {
 
 const scoreCheck2 = () => {
     
-    if (totalscore2 > 19){
+    if (totalscore2 > 29){
         window.confirm("You Win!!!")
         totalscore1 = 0
         totalscore2 = 0
