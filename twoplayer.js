@@ -6,9 +6,38 @@ const p2hold = document.getElementById("hold2")
 let player1score = 0
 let player2score = 0
 let randomNumber1 = 0
-
+let randomNumber2 = 0
 let totalscore1 = 0
 let totalscore2 = 0
+
+const scoreCheck1 = () => {
+    
+    if (totalscore1 > 19){
+        window.confirm("You Win!!!")
+        totalscore1 = 0;
+        totalscore2 = 0;
+        document.getElementById("heldScore1").innerHTML = totalscore1
+        document.getElementById("heldScore2").innerHTML = totalscore2
+
+        p1Go()
+    }
+
+}
+
+const scoreCheck2 = () => {
+    
+    if (totalscore2 > 19){
+        window.confirm("You Win!!!")
+        totalscore1 = 0
+        totalscore2 = 0
+        document.getElementById("heldScore1").innerHTML = totalscore1
+        document.getElementById("heldScore2").innerHTML = totalscore2
+        p1Go()
+    }
+}
+
+
+
 
 const diceShow = () => {
     document.getElementById("diceImage").style.visibility="visible";
@@ -87,18 +116,18 @@ const preRoll2 = () => {
 }
 
 const rollTheDice = () => {
+    
     setTimeout(function () {
         randomNumber1 = Math.floor(Math.random() * 6) + 1;
         if (randomNumber1 == 1){  
             document.getElementById("diceImage").setAttribute("src", "images/dice1.png"); 
             setTimeout(function () {
                 window.confirm("You Rolled 1. Change Player");
-                p2Go()
                 player1score = 0;
                 document.getElementById("score").innerHTML = player1score
+                p2Go()
                 diceHide()
-                ,10
-            })
+            ,10})
             
         }
         else {
@@ -110,35 +139,38 @@ const rollTheDice = () => {
         document.getElementById("score").innerHTML = player1score
         }        
     }, 200); 
-    setTimeout(scoreCheck, 201)
+    
     
 }
 
 const rollTheDice2 = () => {
+    
     setTimeout(function () {
-        randomNumber1 = Math.floor(Math.random() * 6) + 1;
-        if (randomNumber1 == 1){  
+        randomNumber2 = Math.floor(Math.random() * 6) + 1;
+        if (randomNumber2 == 1){  
             document.getElementById("diceImage2").setAttribute("src", "images/dice1.png"); 
             setTimeout(function () {
                 window.confirm("You Rolled 1. Change Player");
-                p1Go()
                 player2score = 0;
                 document.getElementById("score2").innerHTML = player2score
                 diceHide()
+                p1Go()
                 ,10
             })
             
         }
         else {
         document.getElementById("diceImage2").setAttribute("src",
-        "images/dice" + randomNumber1 + ".png"); 
-        console.log(randomNumber1)
-        player2score = Number(player2score) + Number(randomNumber1)
+        "images/dice" + randomNumber2 + ".png"); 
+        console.log(randomNumber2)
+        player2score = Number(player2score) + Number(randomNumber2)
+        
         console.log(player2score)
+        console.log(totalscore2)
         document.getElementById("score2").innerHTML = player2score
         }        
     }, 200); 
-    setTimeout(scoreCheck, 201)
+    
     
 }
 
@@ -169,12 +201,13 @@ p1roll.addEventListener("click", () => {
 })
 
 p1hold.addEventListener("click", () => {
-    document.getElementById("heldScore1").innerHTML = player1score
-    
-    
+    totalscore1  = Number(player1score) + Number(totalscore1)
+    document.getElementById("heldScore1").innerHTML = totalscore1
+    scoreCheck1(totalscore1)
     setTimeout(p2Go(), 10)
     player1score = 0;
     document.getElementById("score").innerHTML = player1score
+    
 })
 
 p2roll.addEventListener("click", () => {
@@ -183,10 +216,11 @@ p2roll.addEventListener("click", () => {
 })
 
 p2hold.addEventListener("click", () => {
-    document.getElementById("heldScore2").innerHTML = player2score
-    
-    
-    setTimeout(p1Go(), 10)
+    totalscore2  = Number(player2score) + Number(totalscore2)
+
+    document.getElementById("heldScore2").innerHTML = totalscore2    
+    scoreCheck2(totalscore2)
     player2score = 0;
     document.getElementById("score2").innerHTML = player2score
+    setTimeout(p1Go(), 10)
 })

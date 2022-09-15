@@ -191,6 +191,9 @@ body {
 #heldScore2{
     font-size: 40px;
 }
+#rollButton2{
+    visibility: hidden;
+}
 
 #hold1{
     visibility: hidden;
