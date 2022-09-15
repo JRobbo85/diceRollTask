@@ -1,7 +1,7 @@
 const button = document.getElementById("rollButton")
 let score = 0
 let randomNumber1 = 0
-let displayScore = document.getElementById("score")
+
 
 const scoreCheck = () => {
     if (score > 19){

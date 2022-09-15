@@ -21,6 +21,7 @@ body {
     display: flex;
     justify-content: center;
     padding-top:3%;
+    flex-direction: row;
 }
 
 .gameSelect{
@@ -52,7 +53,18 @@ body {
     border-style: groove;
     border-color: rgb(151, 151, 151);
     border-width:8px;
-    width:50%;
+    width:30%;
+    height:500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.diceContainer2{
+    border-style: groove;
+    border-color: rgb(151, 151, 151);
+    border-width:8px;
+    width:30%;
     height:500px;
     display: flex;
     flex-direction: column;
@@ -61,15 +73,30 @@ body {
 
 .scoreSection{
     display: flex;
-    justify-content: center;
-    
+    justify-content: center;  
+}
+
+.scoreSection2{
+    display: flex;
+    justify-content: center;  
 }
 
 #score {
     font-size: 50px;
 }
 
+#score2 {
+    font-size: 50px;
+}
+
+
 .diceSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.diceSection2{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -80,13 +107,52 @@ body {
     justify-content: center;
 }
 
+.roller2{
+    display: flex;
+    justify-content: center;
+}
+
 /* #diceImage{
     visibility:hidden;
 } */
 
+.scoreboard{
+    border-style: groove;
+    border-color: rgb(151, 151, 151);
+    border-width:8px;
+    width:20%;
+    height:500px;
+    display: flex;
+    flex-direction: column;
+    
+}
 
+.scores{
+    padding-top:40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
 
+.player1score{
+    border-style: groove;
+    border-width: 2px;
+    border-color: gray;
+    background-color:skyblue;
+    width:100px;
+    height: 100px;
+    text-align: center;
+}
 
+.player2score{
+    border-style: groove;
+    border-width: 2px;
+    border-color: gray;
+    background-color:skyblue;
+    width:100px;
+    height: 100px;
+    text-align: center;
+}
 
 #footBar{
     display: flex;
@@ -100,6 +166,24 @@ body {
     padding: 5px;
     background-color: rgb(0, 0, 0);
     
+}
+
+#title1{
+    display: flex;
+    padding-bottom:20px;
+}
+
+#heldScore1{
+    font-size: 40px;
+}
+
+#title2{
+    display: flex;
+    padding-bottom:20px;
+}
+
+#heldScore2{
+    font-size: 40px;
 }
 
 #credits{
